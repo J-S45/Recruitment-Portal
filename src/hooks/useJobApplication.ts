@@ -29,12 +29,12 @@ const useJobApplication = (onAdd?: () => void) => {
       return apiClient.postMultipart(formData);
     },
 
-    onSuccess: (response) => {
+    onSuccess: () => {
       toast.success("Application submitted successfully", {
         position: "top-right",
         style: { color: "#237227" },
       });
-      console.log("Application submitted successfully:", response);
+      console.log("Application submitted successfully:");
       queryClient.invalidateQueries({ queryKey: ["AppliedJobs"] });
       if (onAdd) onAdd();
       navigate("/home");

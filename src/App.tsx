@@ -12,6 +12,7 @@ import Dashboard from "./components/candidate/Dashboard";
 import ConfirmEmail from "./components/auth/ConfirmEmail";
 import VerificationCode from "./components/auth/VerificationCode";
 import JobApplicationForm from "./components/candidate/Test";
+import ResetPassword from "./components/auth/ResetPassword";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <PublicRoute><VerificationCode/></PublicRoute>
         }/>
         <Route path="/test" element={<PublicRoute> <JobApplicationForm/> </PublicRoute>}/>
+        <Route path="/createPassword" element={<PublicRoute><ResetPassword/></PublicRoute>}/>
 
         {/* Admin & PCD Officer routes */}
         {/* <Route path="/home" element={

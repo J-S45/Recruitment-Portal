@@ -111,3 +111,21 @@ export interface JobPostResponse{
   createdAt: string;
   updatedAt: string;
 }
+
+export interface ConfirmEmailPayload{
+  email: string
+}
+
+export interface ConfirmEmailResponse{
+  message:string
+}
+
+export interface ResetPasswordPayload{
+  token?:string
+  newPassword:string
+  confirmPassword:string
+}
+
+export interface ResetPasswordResponse{
+  message:string
+}
